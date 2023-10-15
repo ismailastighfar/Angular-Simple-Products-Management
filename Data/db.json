@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "HP new ",
+      "price": "3000",
+      "checked": true
+    },
+    {
+      "id": 3,
+      "name": "Lenovo",
+      "price": 2000,
+      "checked": true
+    },
+    {
+      "name": "macbook",
+      "price": "150000",
+      "checked": true,
+      "id": 4
+    },
+    {
+      "name": "asus",
+      "price": "1500",
+      "checked": false,
+      "id": 5
+    },
+    {
+      "name": "macbook pro",
+      "price": "50000",
+      "checked": true,
+      "id": 6
+    }
+  ]
+}
