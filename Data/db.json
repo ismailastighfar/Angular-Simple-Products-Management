@@ -1,34 +1,16 @@
 {
   "products": [
     {
-      "id": 3,
-      "name": "Lenovo",
-      "price": 2000,
-      "checked": true
-    },
-    {
-      "name": "macbook",
-      "price": "150000",
-      "checked": true,
-      "id": 4
-    },
-    {
-      "name": "asus",
-      "price": "1500",
-      "checked": false,
-      "id": 5
+      "id": 4,
+      "name": "hp pro",
+      "price": "2500",
+      "checked": false
     },
     {
       "name": "macbook pro",
-      "price": "50000",
+      "price": "15000",
       "checked": true,
-      "id": 6
-    },
-    {
-      "name": "HP",
-      "price": "5000",
-      "checked": true,
-      "id": 7
+      "id": 5
     }
   ],
   "users": [

@@ -16,6 +16,8 @@ import { AppHttpInterceptor } from './services/app-http.interceptor';
 import { LoginComponent } from './login/login.component';
 import { AdminTemplateComponent } from './admin-template/admin-template.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomerModalAlertComponent } from './customer-modal-alert/customer-modal-alert.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,16 @@ import { NotAuthorizedComponent } from './not-authorized/not-authorized.componen
     ErrorsComponent,
     LoginComponent,
     AdminTemplateComponent,
-    NotAuthorizedComponent
+    NotAuthorizedComponent,
+    CustomerModalAlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [
     {provide :HTTP_INTERCEPTORS , useClass : AppHttpInterceptor ,multi : true}

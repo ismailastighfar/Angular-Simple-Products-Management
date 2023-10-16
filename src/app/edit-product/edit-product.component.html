@@ -7,10 +7,18 @@
               <div class="mb-3">
                 <label class="form-label">Name</label>
                 <input  class="form-control" formControlName="name">
+                <span class="text-danger" *ngIf="productForm.controls['name'].errors
+                && (productForm.controls['name'].touched || productForm.controls['name'].dirty  )">
+                  {{getErrorMessage('Name',productForm.controls['name'].errors)}}
+                </span>
               </div>
               <div class="mb-3">
                 <label class="form-label">Price</label>
                 <input  class="form-control" formControlName="price">
+                <span class="text-danger" *ngIf="productForm.controls['price'].errors
+                && (productForm.controls['price'].touched || productForm.controls['price'].dirty  )">
+                  {{getErrorMessage('Price',productForm.controls['price'].errors)}}
+                </span>
               </div>
               <div class="mb-3">
                 <label class="form-label m-1">Checked</label>

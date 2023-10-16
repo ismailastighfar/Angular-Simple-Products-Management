@@ -28,7 +28,7 @@ export class ProductService {
     return this.http.put<Product>(`${this.host}/products/${product.id}`,product);
   }
 
-  public getProducts(kayword:string="",page:number=1,size:number=2){
+  public getProducts(kayword:string="",page:number=1,size:number=3){
     return this.http.get
     (`${this.host}/products?name_like=${kayword}&_page=${page}&_limit=${size}`,{observe:'response'})
   }

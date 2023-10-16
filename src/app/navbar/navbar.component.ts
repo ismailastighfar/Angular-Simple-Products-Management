@@ -11,6 +11,7 @@ import { Route, Router } from '@angular/router';
 export class NavbarComponent {
 
   public loading =this.loadingService.isLoading$;
+  public admin:string ="admin"
 
   constructor(public appState:AppStateService, public loadingService:LoadingService,
               private route:Router

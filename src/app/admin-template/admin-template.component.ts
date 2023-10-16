@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppStateService } from '../services/app-state.service';
 
 @Component({
   selector: 'app-admin-template',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-template.component.css']
 })
 export class AdminTemplateComponent {
+ 
+  constructor(public appState:AppStateService){}
 
 }

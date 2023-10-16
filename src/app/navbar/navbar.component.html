@@ -17,11 +17,22 @@
 
     <ul class="nav nav-pills">
       <li *ngIf="appState.authState.isAuthenticated">
-        {{appState.authState.username}}
-        <button class="btn btn-success" (click)="logout()">Logout</button>
+        <div class="align-content-center m-1 ">
+          <span class="p-1 m-1" >{{appState.authState.username}}</span>
+        <i class="" style="font-size: 30px; color: green;"
+        [ngClass]="appState.authState.username != admin ?'bi bi-person-circle':'bi bi-person-fill-gear'"
+     ></i>
+        </div>
+        
+        <button class="btn btn-success" (click)="logout()">Logout
+          <i class="bi bi-door-closed-fill"></i>
+        </button>
       </li>
       <li *ngIf="!appState.authState.isAuthenticated">
-        <button class="btn btn-success" (click)="login()">Login</button>
+        <button class="btn btn-success" (click)="login()">Login
+          <i class="bi bi-door-open-fill"></i>
+        </button>
       </li>
     </ul>
+
   </nav>
