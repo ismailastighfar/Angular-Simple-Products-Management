@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppStateService } from '../services/app-state.service';
 import { LoadingService } from '../services/loading.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,12 +12,14 @@ export class NavbarComponent {
 
   public loading =this.loadingService.isLoading$;
 
-  constructor(public appState:AppStateService, public loadingService:LoadingService){}
+  constructor(public appState:AppStateService, public loadingService:LoadingService,
+              private route:Router
+    ){}
 
   actions : Array<any> = [
-    {title:"Home",route:"/home",icon:"house"},
-    {title:"Products",route:"/products",icon:"amazon"},
-    {title:"New Product",route:"/newProduct",icon:"newspaper"}
+    {title:"Home",route:"/admin/home",icon:"house"},
+    {title:"Products",route:"/admin/products",icon:"amazon"},
+    {title:"New Product",route:"/admin/newProduct",icon:"newspaper"}
   ];
   currentAction:any;
 
@@ -24,4 +27,12 @@ export class NavbarComponent {
    this.currentAction = action;
   }
 
+  logout() {
+    this.appState.authState={};
+    this.route.navigateByUrl("/login");
+  }
+
+  login() {
+    this.route.navigateByUrl("/login");
+  }
 }
